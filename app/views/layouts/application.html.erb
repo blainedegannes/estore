@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>Estore</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+   <title><%= title %></title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <%= javascript_include_tag :defaults %>
+   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="doc3" class="yui-t3">
+   <div id="hd" role="banner"><h1>Header</h1></div>
+   <div id="bd" role="main">
+	<div id="yui-main">
+	<div class="yui-b"><div role="application" class="yui-g">
+		<%= yield %>
+	<!-- YOUR DATA GOES HERE -->
+	</div>
+</div>
+	</div>
+	<div role="complementary" class="yui-b"><!-- YOUR NAVIGATION GOES HERE --></div>
+	
+	</div>
+   <div id="ft" role="contentinfo"><p>Footer</p></div>
+</div>
 </body>
 </html>
+
