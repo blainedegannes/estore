@@ -4,12 +4,15 @@
 <head>
    <title><%= title %></title>
    <link rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
    <%= javascript_include_tag :defaults %>
    <%= csrf_meta_tag %>
 </head>
 <body>
 <div id="doc3" class="yui-t3">
-   <div id="hd" role="banner"><h1>Header</h1></div>
+   <div id="hd" role="banner">
+	 <%= render 'layouts/header' %>
+	</div>
    <div id="bd" role="main">
 	<div id="yui-main">
 	<div class="yui-b"><div role="application" class="yui-g">
@@ -21,7 +24,9 @@
 	<div role="complementary" class="yui-b"><!-- YOUR NAVIGATION GOES HERE --></div>
 	
 	</div>
-   <div id="ft" role="contentinfo"><p>Footer</p></div>
+   <div id="ft" role="contentinfo">
+ 	  <%= render 'layouts/footer' %>
+  </div>
 </div>
 </body>
 </html>

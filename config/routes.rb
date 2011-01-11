@@ -1,7 +1,7 @@
 Estore::Application.routes.draw do
-  get "pages/about"
+  match '/about', :to => 'pages#about'
 
-  get "pages/contact"
+  match '/contact', :to => 'pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
