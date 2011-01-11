@@ -1,4 +1,6 @@
 Estore::Application.routes.draw do
+  get "main/landing"
+
   match '/about', :to => 'pages#about'
 
   match '/contact', :to => 'pages#contact'
