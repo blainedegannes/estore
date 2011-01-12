@@ -1,8 +1,6 @@
 Estore::Application.routes.draw do
-  get "main/landing"
-
+  root :to => "main#landing"
   match '/about', :to => 'pages#about'
-
   match '/contact', :to => 'pages#contact'
 
   # The priority is based upon order of creation:
