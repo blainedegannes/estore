@@ -1,5 +1,8 @@
 Estore::Application.routes.draw do
-  root :to => "main#landing"
+  resources :users
+
+  #root :to => "main#landing"
+  match '/signup',  :to => 'users#new'
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
 
