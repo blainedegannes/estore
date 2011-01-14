@@ -16,7 +16,11 @@
    <div id="bd" role="main">
 	<div id="yui-main">
 	<div class="yui-b"><div role="application" class="yui-g">
+		<% flash.each do |key, value| %>
+		   <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
 		<%= yield %>
+		<%= debug(params) if Rails.env.development? %>
 	<!-- YOUR DATA GOES HERE -->
 	</div>
 </div>
@@ -26,7 +30,6 @@
 	</div>
    <div id="ft" role="contentinfo">
  	  <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
   </div>
 </div>
 </body>

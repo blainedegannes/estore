@@ -1,10 +1,10 @@
 Estore::Application.routes.draw do
   resources :users
 
-  #root :to => "main#landing"
-  match '/signup',  :to => 'users#new'
+  root :to => "users#new"
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
+  match '/sales', :to => 'pages#sales'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -8,4 +8,7 @@ class PagesController < ApplicationController
     @title = "Contact"
   end
 
+  def sales
+    @title = "Sales"
+  end
 end

@@ -30,5 +30,17 @@ describe PagesController do
           response.should have_selector("title", :content => @base_title + " | Contact")
     end
   end
+  
+  describe "GET 'sales'" do
+    it "should be successful" do
+      get 'sales'
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+          get 'sales'
+          response.should have_selector("title", :content => @base_title + " | Sales")
+    end
+  end
 
 end
